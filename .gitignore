@@ -1,0 +1,47 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+.nuxt-temp
+
+# Testing / coverage
+coverage
+.nyc_output
+
+# Node dependencies
+node_modules
+.pnpm-store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Misc
+.DS_Store
+.Thumbs.db
+.history
+.eslintcache
+.parcel-cache
+.fleet
+.idea
+.vscode/
+
+# Local env files
+.env
+.env.*
+!.env.example
+*.local
+
+# Deployment providers
+.vercel
+.netlify
+
+# Build systems / monorepos
+.turbo
