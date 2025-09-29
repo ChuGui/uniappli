@@ -24,7 +24,7 @@
       <!-- Feature grid -->
       <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- CRM -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">CRM</div>
             <h3 class="text-lg font-semibold text-default">CRM sur‑mesure</h3>
@@ -32,7 +32,7 @@
           <p class="mt-3 text-muted">Centralisez prospects, clients et conversations pour ne rien laisser passer.</p>
         </div>
         <!-- Site / Landing -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">WEB</div>
             <h3 class="text-lg font-semibold text-default">Site / Landing page</h3>
@@ -40,7 +40,7 @@
           <p class="mt-3 text-muted">Pensée pour convertir directement vos visiteurs en rendez‑vous qualifiés.</p>
         </div>
         <!-- Tunnel de vente -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">FUN</div>
             <h3 class="text-lg font-semibold text-default">Tunnel de vente</h3>
@@ -48,7 +48,7 @@
           <p class="mt-3 text-muted">Un parcours clair qui accompagne vos prospects jusqu’à l’action.</p>
         </div>
         <!-- Lead magnet -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">LM</div>
             <h3 class="text-lg font-semibold text-default">Lead magnet</h3>
@@ -56,7 +56,7 @@
           <p class="mt-3 text-muted">Un contenu valeur pour attirer et capter des leads qualifiés.</p>
         </div>
         <!-- Automatisations -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">AUTO</div>
             <h3 class="text-lg font-semibold text-default">Automatisations intelligentes</h3>
@@ -64,7 +64,7 @@
           <p class="mt-3 text-muted">Emails, WhatsApp, SMS, DM Insta… qualification continue sans effort.</p>
         </div>
         <!-- App mobile -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">APP</div>
             <h3 class="text-lg font-semibold text-default">Application mobile</h3>
@@ -72,7 +72,7 @@
           <p class="mt-3 text-muted">Gérez tout depuis votre poche, où que vous soyez.</p>
         </div>
         <!-- E-réputation -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm hover:shadow transition sm:col-span-2 lg:col-span-1">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md sm:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">REP</div>
             <h3 class="text-lg font-semibold text-default">Réputation en ligne</h3>
@@ -85,7 +85,7 @@
       <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]"
           >
           Démarrer votre système
         </NuxtLink>

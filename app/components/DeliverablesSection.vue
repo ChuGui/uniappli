@@ -25,7 +25,7 @@
       <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Left column -->
         <div class="space-y-4">
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">🔥</span>
               <div>
@@ -34,7 +34,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">🎯</span>
               <div>
@@ -43,7 +43,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">📅</span>
               <div>
@@ -52,7 +52,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">🛠️</span>
               <div>
@@ -69,7 +69,7 @@
 
         <!-- Right column -->
         <div class="space-y-4">
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">📲</span>
               <div>
@@ -78,7 +78,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">📒</span>
               <div>
@@ -87,7 +87,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">⭐</span>
               <div>
@@ -96,7 +96,7 @@
               </div>
             </div>
           </div>
-          <div class="p-5 rounded-2xl border border-default bg-white shadow-sm">
+          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">📍</span>
               <div>
@@ -112,7 +112,7 @@
       <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-all duration-200 hover:scale-[1.03]"
           >
           Obtenir ma checklist détaillée
         </NuxtLink>

@@ -23,19 +23,19 @@
 
       <!-- Unique value points -->
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <h3 class="text-lg font-semibold text-default">Un système aligné avec vos valeurs</h3>
           <p class="mt-2 text-muted">Une expérience qui vous ressemble, sans artifices, fidèle à votre identité et à la relation que vous souhaitez créer.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <h3 class="text-lg font-semibold text-default">Une écoute réelle de vos besoins</h3>
           <p class="mt-2 text-muted">Une personne dédiée qui comprend votre contexte et ajuste les priorités avec vous, pas une solution générique.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <h3 class="text-lg font-semibold text-default">CRM & automatisations sur‑mesure</h3>
           <p class="mt-2 text-muted">Des workflows conçus autour de votre façon de travailler, pour gagner du temps sans perdre en qualité.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <h3 class="text-lg font-semibold text-default">Veille technologique continue</h3>
           <p class="mt-2 text-muted">Un expert à vos côtés pour rester à la pointe des nouveautés et garder une longueur d’avance sur votre marché.</p>
         </div>
@@ -45,7 +45,7 @@
       <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-all duration-200 hover:scale-[1.03]"
         >
           Construire mon système sur‑mesure
         </NuxtLink>

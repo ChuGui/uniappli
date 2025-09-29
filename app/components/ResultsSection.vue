@@ -24,7 +24,7 @@
       <!-- Results grid -->
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Result 1 -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="text-4xl font-bold text-default">
             <span class="text-primary-gradient">10+</span>
           </div>
@@ -32,7 +32,7 @@
           <p class="text-muted">dès le 1er mois, une fois le système en place.</p>
         </div>
         <!-- Result 2 -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="text-4xl font-bold text-default">
             <span class="text-primary-gradient">20h+</span>
           </div>
@@ -40,7 +40,7 @@
           <p class="text-muted">pour vous concentrer sur votre cœur de métier.</p>
         </div>
         <!-- Result 3 -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
           <div class="text-4xl font-bold text-default">
             <span class="text-primary-gradient">+ sérénité</span>
           </div>
@@ -56,7 +56,7 @@
       <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-all duration-200 hover:scale-[1.03]"
           >
           Obtenir mes résultats
         </NuxtLink>

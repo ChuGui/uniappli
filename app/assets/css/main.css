@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&family=Lobster+Two:wght@400;700&display=swap");
 @import "tailwindcss";
 
 /* Google Fonts */
@@ -37,6 +37,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title);
+}
+
+/* Custom font utility for special headings */
+.font-lobster {
+  font-family: 'Lobster Two', cursive;
 }
 
 /* Utilities */

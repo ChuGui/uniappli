@@ -21,51 +21,51 @@
         </p>
       </div>
 
-      <!-- Pricing cards -->
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Monthly subscription -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm h-full flex flex-col">
+      <!-- Combined pricing card -->
+      <div class="mt-10">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md flex flex-col">
           <h3 class="text-xl font-semibold text-default flex items-center gap-2">
-            <span>Abonnement mensuel</span>
-            <span class="text-sm px-2 py-0.5 rounded-full bg-secondary/10 text-secondary">Recommandé</span>
+            <span>Abonnement + Mise en place</span>
+            <span class="text-sm px-2 py-0.5 rounded-full bg-secondary/10 text-secondary">Complet</span>
           </h3>
-          <div class="mt-3 text-4xl font-bold text-default">
-            <span class="text-primary-gradient">197 €</span>
-            <span class="text-base font-medium text-muted">/mois</span>
-          </div>
-          <p class="mt-4 text-default font-medium">Tout compris :</p>
-          <ul class="mt-3 space-y-2 text-muted list-disc pl-5">
-            <li>Hébergement</li>
-            <li>CRM</li>
-            <li>Support</li>
-            <li>Mise à jour</li>
-            <li>Optimisation continue</li>
-          </ul>
-          <div class="mt-auto pt-6 flex justify-center md:justify-end">
-            <NuxtLink
-              to="/contact"
-              class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
-              >
-              Démarrer mon abonnement
-            </NuxtLink>
-          </div>
-        </div>
 
-        <!-- Setup fee -->
-        <div class="p-6 rounded-2xl border border-default bg-white shadow-sm h-full flex flex-col">
-          <h3 class="text-xl font-semibold text-default">Frais de mise en place complète</h3>
-          <div class="mt-3 text-4xl font-bold text-default">
-            <span class="text-primary-gradient">797 €</span>
+          <!-- Subscription price -->
+          <div class="mt-4">
+            <div class="text-4xl font-bold text-default">
+              <span class="text-primary-gradient">197 €</span>
+              <span class="text-base font-medium text-muted">/mois</span>
+            </div>
+            <p class="mt-3 text-default font-medium">Tout compris :</p>
+            <ul class="mt-3 space-y-2 text-muted list-disc pl-5">
+              <li>Hébergement</li>
+              <li>CRM</li>
+              <li>Support</li>
+              <li>Mises à jour</li>
+              <li>Optimisation continue</li>
+            </ul>
           </div>
-          <p class="mt-4 text-muted">
-            Mise en place de l'écosystème complet (tunnel, CRM, automatisations, tracking, contenus clés, connecteurs...).
-          </p>
-          <div class="mt-auto pt-6 flex justify-center md:justify-end">
+
+          <!-- Divider -->
+          <div class="my-6 h-px w-full bg-gradient-to-r from-transparent via-gray-300/60 to-transparent"></div>
+
+          <!-- Setup fee -->
+          <div>
+            <h4 class="text-default font-semibold">Frais de mise en place complète</h4>
+            <div class="mt-2 text-3xl font-bold text-default">
+              <span class="text-primary-gradient">797 €</span>
+            </div>
+            <p class="mt-3 text-muted">
+              Mise en place de l'écosystème complet (tunnel, CRM, automatisations, tracking, contenus clés, connecteurs...).
+            </p>
+          </div>
+
+          <!-- CTAs -->
+          <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <NuxtLink
               to="/contact"
-              class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
-              >
-              Réserver ma mise en place
+              class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-all duration-200 hover:scale-[1.03]"
+            >
+              Démarrer mon abonnement
             </NuxtLink>
           </div>
         </div>
