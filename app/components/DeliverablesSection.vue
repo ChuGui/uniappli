@@ -60,7 +60,8 @@
                 <ul class="mt-2 space-y-2 text-muted list-disc pl-5">
                   <li>📒 Gestion de calendrier & prises de rendez‑vous automatisées</li>
                   <li>👥 Gestion des contacts selon leurs intérêts</li>
-                  <li>📊 Dashboard clair avec vos statistiques clés</li>
+                  <li>📲 Tous vos canaux de communication au même endroit <span class="text-muted">( Instagram, emails, WhatsApp, Messenger… )</span> </li>
+                  <li>📅 Planificateur de réseaux sociaux <span class="text-muted">( Programmez vos contenus et reliez directement votre tunnel de vente )</span> </li>
                 </ul>
               </div>
             </div>
@@ -69,24 +70,6 @@
 
         <!-- Right column -->
         <div class="space-y-4">
-          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <div class="flex items-start gap-3">
-              <span class="text-xl">📲</span>
-              <div>
-                <h3 class="text-default font-semibold">Tous vos canaux au même endroit</h3>
-                <p class="text-muted">Instagram, emails, WhatsApp, Messenger… centralisés pour une vue unifiée.</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <div class="flex items-start gap-3">
-              <span class="text-xl">📒</span>
-              <div>
-                <h3 class="text-default font-semibold">Planificateur de réseaux sociaux</h3>
-                <p class="text-muted">Programmez vos contenus et reliez directement votre tunnel de vente.</p>
-              </div>
-            </div>
-          </div>
           <div class="p-5 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
             <div class="flex items-start gap-3">
               <span class="text-xl">⭐</span>
