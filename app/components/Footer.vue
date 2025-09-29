@@ -44,16 +44,6 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                À propos
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                Services
-              </NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
                 Contact
               </NuxtLink>
