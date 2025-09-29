@@ -35,13 +35,13 @@
           <div class="mt-10 flex flex-wrap items-center gap-4 justify-center md:justify-start">
             <NuxtLink
               to="/contact"
-              class="inline-flex items-center justify-center rounded-lg bg-secondary text-white px-6 py-3 font-medium shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+              class="inline-flex items-center justify-center rounded-full bg-primary-gradient text-white px-6 py-3 font-bold shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
             >
               Nous contacter
             </NuxtLink>
             <NuxtLink
               to="/about"
-              class="inline-flex items-center justify-center rounded-lg border border-default px-6 py-3 font-medium text-default hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+              class="inline-flex items-center justify-center rounded-full  px-6 py-3 font-medium text-default hover:bg-gray-50 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
             >
               En savoir plus
             </NuxtLink>

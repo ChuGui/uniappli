@@ -1,11 +1,11 @@
 <template>
-  <nav class="bg-white shadow-lg border-b border-gray-200">
+  <nav :class="navClasses">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex-shrink-0">
           <NuxtLink to="/" class="flex items-center">
-            <span class="text-2xl font-bold text-blue-600">UniAppli</span>
+            <img src="/UniAppli.png" alt="UniAppli" class="h-8 w-auto" />
           </NuxtLink>
         </div>
 
@@ -122,9 +122,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 const isMenuOpen = ref(false)
+const isScrolled = ref(false)
 
 const toggleMobileMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -133,4 +134,26 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMenuOpen.value = false
 }
+
+const handleScroll = () => {
+  if (typeof window !== 'undefined') {
+    isScrolled.value = window.scrollY > 0
+  }
+}
+
+onMounted(() => {
+  handleScroll()
+  window.addEventListener('scroll', handleScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
+const navClasses = computed(() => {
+  const base = 'sticky top-0 z-50 transition-all duration-300'
+  return isScrolled.value
+    ? `${base} bg-white/70 backdrop-blur-md border-b border-gray-200 shadow-sm`
+    : `${base} bg-transparent`
+})
 </script>

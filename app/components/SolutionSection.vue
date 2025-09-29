@@ -4,7 +4,15 @@
       <!-- Heading -->
       <div class="max-w-4xl">
         <h2 class="text-3xl sm:text-4xl font-bold">
-          <span class="align-middle mr-2">✅</span>
+          <lottie-player
+            src="/lotties/solution.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+            class="inline-block align-middle mr-2 w-16 h-16"
+            aria-label="Animation solution"
+          ></lottie-player>
           <span class="text-primary-gradient">La solution : votre système automatique d’acquisition & de gestion de clients</span>
         </h2>
         <div class="mt-3 h-1 w-28 bg-primary-gradient rounded"></div>
@@ -74,11 +82,11 @@
       </div>
 
       <!-- CTA -->
-      <div class="mt-12">
+      <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center justify-center rounded-lg bg-secondary text-white px-6 py-3 font-medium shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
-        >
+          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition"
+          >
           Démarrer votre système
         </NuxtLink>
       </div>
