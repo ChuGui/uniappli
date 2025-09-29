@@ -20,20 +20,6 @@
               Accueil
             </NuxtLink>
             <NuxtLink 
-              to="/about" 
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-              active-class="text-blue-600 bg-blue-50"
-            >
-              À propos
-            </NuxtLink>
-            <NuxtLink 
-              to="/services" 
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-              active-class="text-blue-600 bg-blue-50"
-            >
-              Services
-            </NuxtLink>
-            <NuxtLink 
               to="/contact" 
               class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               active-class="text-blue-600 bg-blue-50"
