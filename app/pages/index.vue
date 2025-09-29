@@ -23,8 +23,44 @@
         class="group inline-flex items-center gap-3 px-3 py-2 rounded-full border border-default bg-white/50 backdrop-blur-md shadow-sm transition-all duration-200 hover:scale-[1.02]"
         :class="activeId === item.id ? 'ring-2 ring-[var(--color-primary-start)]' : 'hover:bg-white/70'"
       >
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-gradient"></span>
+        <lottie-player
+          v-if="lotties[item.id]"
+          :src="lotties[item.id]"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          class="w-5 h-5"
+          :aria-label="`Icône ${item.label}`"
+        ></lottie-player>
         <span class="text-sm font-medium text-default">{{ item.label }}</span>
+      </a>
+    </nav>
+
+    <!-- Mobile-only floating breadcrumb (Accueil, Garantie, Tarifs) -->
+    <nav
+      class="flex lg:hidden fixed right-3 bottom-6 z-40 flex-col gap-2"
+      aria-label="Navigation sections (mobile)"
+    >
+      <a
+        v-for="item in mobileItems"
+        :key="item.id"
+        :href="`#${item.id}`"
+        @click.prevent="scrollTo(item.id)"
+        class="group inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-default bg-white/60 backdrop-blur-md shadow-sm transition-all duration-200 hover:scale-[1.02]"
+        :class="activeId === item.id ? 'ring-2 ring-[var(--color-primary-start)]' : 'hover:bg-white/80'"
+      >
+        <lottie-player
+          v-if="lotties[item.id]"
+          :src="lotties[item.id]"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          class="w-5 h-5"
+          :aria-label="`Icône ${item.label}`"
+        ></lottie-player>
+        <span class="text-xs font-medium text-default">{{ item.label }}</span>
       </a>
     </nav>
   </div>
@@ -38,7 +74,7 @@ const items: Item[] = [
   { id: 'accueil', label: 'Accueil' },
   { id: 'probleme', label: 'Problème' },
   { id: 'solution', label: 'Solution' },
-  { id: 'resultats', label: 'Résultats' },
+  { id: 'resultats', label: 'Garantie' },
   { id: 'unicite', label: 'Unicité' },
   { id: 'livrables', label: 'Livrables' },
   { id: 'tarifs', label: 'Tarifs' },
@@ -46,6 +82,18 @@ const items: Item[] = [
 ]
 
 const activeId = ref<string>('accueil')
+
+// Lottie icons per section (used in the floating breadcrumb)
+const lotties: Record<string, string> = {
+  accueil: '/lotties/business-team.json',
+  probleme: '/lotties/under-maintenance.json',
+  solution: '/lotties/solution.json',
+  resultats: '/lotties/Star.json',
+  unicite: '/lotties/Diamond.json',
+  livrables: '/lotties/gift.json',
+  tarifs: '/lotties/dollar.json',
+  action: '/lotties/rocket-solo.json',
+}
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
@@ -75,4 +123,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   observer?.disconnect()
 })
+
+// Items to show on mobile only (Accueil, Garantie, Tarifs)
+const mobileItems = items.filter(i => ['accueil', 'resultats', 'tarifs'].includes(i.id))
 </script>
+
