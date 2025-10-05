@@ -28,6 +28,7 @@
             </NuxtLink>
             <NuxtLink
               to="/rendez-vous"
+              @click="trackNavbarCTA"
               class="inline-flex items-center justify-center rounded-full bg-primary-gradient text-white px-4 py-2 text-sm font-semibold shadow-lg hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-transform duration-200 hover:scale-[1.03]"
             >
               Prendre un rendez-vous
@@ -110,7 +111,7 @@
         </NuxtLink>
         <NuxtLink 
           to="/rendez-vous" 
-          @click="closeMobileMenu"
+          @click="() => { trackNavbarCTA(); closeMobileMenu() }"
           class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
           active-class="text-blue-600 bg-blue-50"
         >
@@ -156,4 +157,23 @@ const navClasses = computed(() => {
     ? `${base} bg-white/70 backdrop-blur-md border-b border-gray-200 shadow-sm`
     : `${base} bg-transparent`
 })
+
+function trackNavbarCTA() {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'cta_click', {
+      category: 'engagement',
+      label: 'navbar_rendez_vous',
+      source: 'navbar',
+      location: 'desktop_or_mobile',
+    })
+  } else if (typeof window !== 'undefined' && (window as any).dataLayer) {
+    (window as any).dataLayer.push({
+      event: 'cta_click',
+      category: 'engagement',
+      label: 'navbar_rendez_vous',
+      source: 'navbar',
+      location: 'desktop_or_mobile',
+    })
+  }
+}
 </script>
