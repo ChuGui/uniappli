@@ -20,6 +20,13 @@
               Accueil
             </NuxtLink>
             <NuxtLink 
+              to="/services" 
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              active-class="text-blue-600 bg-blue-50"
+            >
+              Services
+            </NuxtLink>
+            <NuxtLink 
               to="/contact" 
               class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               active-class="text-blue-600 bg-blue-50"
@@ -159,15 +166,15 @@ const navClasses = computed(() => {
 })
 
 function trackNavbarCTA() {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'cta_click', {
+  if (typeof window !== 'undefined' && (window).gtag) {
+    (window).gtag('event', 'cta_click', {
       category: 'engagement',
       label: 'navbar_rendez_vous',
       source: 'navbar',
       location: 'desktop_or_mobile',
     })
-  } else if (typeof window !== 'undefined' && (window as any).dataLayer) {
-    (window as any).dataLayer.push({
+  } else if (typeof window !== 'undefined' && (window).dataLayer) {
+    (window).dataLayer.push({
       event: 'cta_click',
       category: 'engagement',
       label: 'navbar_rendez_vous',

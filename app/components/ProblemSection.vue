@@ -62,7 +62,7 @@
       <!-- CTA subtle -->
       <div class="mt-10 flex justify-center md:justify-start">
         <NuxtLink
-          to="/contact"
+          to="/rendez-vous"
           class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]"
           >
           Résoudre ces problèmes
