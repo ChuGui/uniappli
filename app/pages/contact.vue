@@ -10,19 +10,21 @@
       <!-- Heading -->
       <div class="text-center">
         <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
-          <span class="text-primary-gradient font-lobster drop-shadow-md">Contactez‑nous ou prenez directement votre rendez-vous découverte</span>
+          <span class="text-primary-gradient font-lobster drop-shadow-md">Une question ? N'hésitez pas à nous contacter</span>
         </h1>
         <div class="mt-3 h-1 w-28 bg-primary-gradient rounded mx-auto"></div>
-        <p class="mt-6 text-lg text-muted">Dites‑nous en plus sur votre besoin. Nous revenons vers vous rapidement.</p>
+        <p class="mt-6 text-lg text-muted">Dites‑nous en plus sur votre besoin. Nous revenons vers vous rapidement ou prenez directement votre rendez-vous découverte</p>
         <div class="mt-6">
-          <a href="#booking-widget" @click.prevent="scrollToBooking"
-             class="inline-flex items-center justify-center rounded-full bg-primary-gradient text-white px-6 py-3 font-bold shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]">
+          <NuxtLink
+            to="/rendez-vous"
+            class="inline-flex items-center justify-center rounded-full bg-primary-gradient text-white px-6 py-3 font-bold shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-transform duration-200 hover:scale-[1.03]"
+          >
             Prendre rendez-vous
-          </a>
+          </NuxtLink>
         </div>
       </div>
 
-      <!-- Form + Booking stacked -->
+      <!-- Form only -->
       <div class="mt-10 grid grid-cols-1 gap-8 items-start">
         <!-- Form card -->
         <div class="p-6 sm:p-8 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
@@ -94,20 +96,6 @@
           </div>
           <p v-if="feedback" class="text-sm mt-2" :class="feedbackType === 'error' ? 'text-red-600' : 'text-green-600'">{{ feedback }}</p>
           </form>
-        </div>
-
-        <!-- Booking calendar card -->
-        <div class="p-6 sm:p-8 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
-          <h2 class="text-2xl font-bold">Prendre rendez-vous</h2>
-          <p class="text-muted mt-2 text-sm">Réservez un créneau directement dans notre agenda.</p>
-          <div class="mt-4">
-            <ClientOnly>
-              <div class="w-full scroll-mt-28" id="booking-widget">
-                <iframe src="https://api.leadconnectorhq.com/widget/booking/N1tEhmxizgpmRrGOFxFN" style="width: 100%; border:none; overflow: hidden;" scrolling="no" id="N1tEhmxizgpmRrGOFxFN_1759650607201"></iframe>
-                <br />
-              </div>
-            </ClientOnly>
-          </div>
         </div>
       </div>
     </div>
