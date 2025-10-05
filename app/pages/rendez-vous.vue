@@ -23,8 +23,17 @@
         <div class="mt-4">
           <ClientOnly>
             <div class="w-full" id="booking-widget">
-              <iframe src="https://api.leadconnectorhq.com/widget/booking/N1tEhmxizgpmRrGOFxFN" style="width: 100%; border:none; overflow: hidden;" scrolling="no" id="N1tEhmxizgpmRrGOFxFN_1759650607201"></iframe>
+              <iframe src="https://api.leadconnectorhq.com/widget/booking/N1tEhmxizgpmRrGOFxFN" style="width: 100%; height: 300px; border:none; overflow: hidden;" scrolling="no" id="booking-iframe"></iframe>
               <br />
+              <div v-if="showBlockedWarning" class="mt-4 p-4 rounded-xl border border-amber-300 bg-amber-50 text-amber-900">
+                <p class="font-semibold">Le calendrier ne s’est pas chargé.</p>
+                <p class="mt-1 text-sm">Il est possible qu’un bloqueur de publicités/pop-ups empêche le chargement. Veuillez désactiver le bloqueur pour ce site, puis cliquez sur « Réessayer ».</p>
+                <div class="mt-3">
+                  <button @click="retryLoadBooking" type="button" class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-4 py-2 text-sm font-medium shadow hover:opacity-95">
+                    Réessayer
+                  </button>
+                </div>
+              </div>
             </div>
           </ClientOnly>
         </div>
@@ -34,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 // --- Programmatic load of the provider script ---
 function loadBookingScript() {
@@ -60,6 +69,9 @@ function gaTrack(event: string, params: Record<string, any> = {}) {
 
 let widgetViewed = false
 let io: IntersectionObserver | null = null
+let widgetMessaged = false
+const showBlockedWarning = ref(false)
+let loadTimeout: ReturnType<typeof setTimeout> | null = null
 function setupBookingWidgetTracking() {
   if (typeof window === 'undefined') return
   const el = document.getElementById('booking-widget')
@@ -82,6 +94,7 @@ function setupBookingWidgetTracking() {
     try {
       const origin = String(evt.origin || '')
       if (!origin.includes('leadconnectorhq.com') && !origin.includes('msgsndr.com')) return
+      widgetMessaged = true
       const data = evt.data
       if (typeof data === 'object' && data) {
         const type = (data.type || data.event || '') as string
@@ -93,9 +106,25 @@ function setupBookingWidgetTracking() {
   }
   window.addEventListener('message', handler)
 
+  // Detect potential blocking: if iframe doesn't load within timeout, show warning
+  const iframe = document.getElementById('booking-iframe') as HTMLIFrameElement | null
+  let loaded = false
+  if (iframe) {
+    const onLoad = () => { loaded = true }
+    iframe.addEventListener('load', onLoad, { once: true })
+  }
+  loadTimeout = setTimeout(() => {
+    const heightOk = iframe ? iframe.clientHeight > 300 : false
+    if (!loaded || !widgetMessaged || !heightOk) {
+      showBlockedWarning.value = true
+      gaTrack('booking_widget_blocked', { page: 'rendez-vous' })
+    }
+  }, 9000)
+
   onBeforeUnmount(() => {
     if (io) io.disconnect()
     window.removeEventListener('message', handler)
+    if (loadTimeout) clearTimeout(loadTimeout)
   })
 }
 
@@ -103,4 +132,20 @@ onMounted(() => {
   loadBookingScript()
   setupBookingWidgetTracking()
 })
+
+function retryLoadBooking() {
+  try {
+    showBlockedWarning.value = false
+    // Reload provider script
+    loadBookingScript()
+    // Reload iframe
+    const iframe = document.getElementById('booking-iframe') as HTMLIFrameElement | null
+    if (iframe) {
+      const src = iframe.getAttribute('src') || ''
+      iframe.setAttribute('src', src)
+    }
+    // Re-run detection
+    setupBookingWidgetTracking()
+  } catch (_) { /* ignore */ }
+}
 </script>
