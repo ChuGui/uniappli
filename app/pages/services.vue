@@ -16,16 +16,54 @@
         <p class="mt-6 text-lg text-muted">Ce que vous recevez concrètement avec UniAppli.</p>
       </div>
 
-      <!-- Deliverables -->
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Deliverables (stacked vertically) -->
+      <div class="mt-12 grid grid-cols-1 gap-8">
         <!-- 1. Tunnel de vente -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
+        <div class="p-6 rounded-2xl border-default bg-white/30 backdrop-blur-md shadow-sm">
           <h2 class="text-2xl font-bold">Tunnel de vente personnalisé</h2>
-          <ul class="mt-4 list-disc pl-5 text-default space-y-2">
-            <li>Pages d’inscription, de vente et de réservation adaptées à votre activité.</li>
-            <li>Copywriting de base et structure orientée conversion.</li>
-            <li>Intégration pixel/UTM (si demandé) et suivi des conversions.</li>
-          </ul>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <!-- Liste (gauche) -->
+            <ul class="list-disc pl-5 text-default space-y-2">
+              <li>Pages d’inscription, de vente et de réservation adaptées à votre activité.</li>
+              <li>Copywriting de base et structure orientée conversion.</li>
+              <li>Intégration pixel/UTM (si demandé) et suivi des conversions.</li>
+            </ul>
+
+            <!-- Schéma (droite) -->
+            <div class="w-full">
+              <div class="hidden md:flex flex-col items-center gap-3" aria-label="Schéma du tunnel de vente">
+                <div class="px-4 py-2 rounded-full text-white shadow bg-primary-gradient">Trafic</div>
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 0v20M8 20l-5-5M8 20l5-5" stroke="currentColor" class="text-gray-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="px-4 py-2 rounded-xl text-white shadow bg-secondary">Page d'atterrissage</div>
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 0v20M8 20l-5-5M8 20l5-5" stroke="currentColor" class="text-gray-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="px-4 py-2 rounded-xl text-white shadow bg-primary-gradient">Formulaire / Réservation</div>
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 0v20M8 20l-5-5M8 20l5-5" stroke="currentColor" class="text-gray-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="px-4 py-2 rounded-xl text-white shadow bg-secondary">CRM & Nurturing</div>
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8 0v20M8 20l-5-5M8 20l5-5" stroke="currentColor" class="text-gray-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="px-4 py-2 rounded-full text-white shadow bg-primary-gradient">RDV / Vente</div>
+              </div>
+              <!-- Version mobile: en lignes -->
+              <div class="md:hidden flex flex-wrap items-center justify-center gap-2" aria-label="Schéma du tunnel de vente">
+                <div class="px-3 py-1 rounded-full text-white shadow bg-primary-gradient text-sm">Trafic</div>
+                <span class="text-gray-400">→</span>
+                <div class="px-3 py-1 rounded-xl text-white shadow bg-secondary text-sm">Landing</div>
+                <span class="text-gray-400">→</span>
+                <div class="px-3 py-1 rounded-xl text-white shadow bg-primary-gradient text-sm">Formulaire</div>
+                <span class="text-gray-400">→</span>
+                <div class="px-3 py-1 rounded-xl text-white shadow bg-secondary text-sm">CRM</div>
+                <span class="text-gray-400">→</span>
+                <div class="px-3 py-1 rounded-full text-white shadow bg-primary-gradient text-sm">RDV</div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- 2. CRM -->
         <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
@@ -55,7 +93,7 @@
           </ul>
         </div>
         <!-- 5. Formation & support -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm md:col-span-2">
+        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
           <h2 class="text-2xl font-bold">Formation & ressources</h2>
           <ul class="mt-4 list-disc pl-5 text-default space-y-2">
             <li>Onboarding guidé et tutoriels pas à pas.</li>
