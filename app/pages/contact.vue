@@ -10,15 +10,24 @@
       <!-- Heading -->
       <div class="text-center">
         <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
-          <span class="text-primary-gradient font-lobster">Contactez‑nous</span>
+          <span class="text-primary-gradient font-lobster drop-shadow-md">Contactez‑nous ou prenez directement votre rendez-vous découverte</span>
         </h1>
         <div class="mt-3 h-1 w-28 bg-primary-gradient rounded mx-auto"></div>
         <p class="mt-6 text-lg text-muted">Dites‑nous en plus sur votre besoin. Nous revenons vers vous rapidement.</p>
+        <div class="mt-6">
+          <a href="#booking-widget" @click.prevent="scrollToBooking"
+             class="inline-flex items-center justify-center rounded-full bg-primary-gradient text-white px-6 py-3 font-bold shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]">
+            Prendre rendez-vous
+          </a>
+        </div>
       </div>
 
-      <!-- Form card -->
-      <div class="mt-10 p-6 sm:p-8 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
-        <form class="space-y-6" @submit.prevent="handleSubmit">
+      <!-- Form + Booking stacked -->
+      <div class="mt-10 grid grid-cols-1 gap-8 items-start">
+        <!-- Form card -->
+        <div class="p-6 sm:p-8 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
+          <h2 class="text-2xl font-bold">Contactez-nous</h2>
+          <form class="space-y-6" @submit.prevent="handleSubmit">
           <!-- Email -->
           <div>
             <label for="email" class="block text-sm font-medium text-default">Email</label>
@@ -84,14 +93,29 @@
             </button>
           </div>
           <p v-if="feedback" class="text-sm mt-2" :class="feedbackType === 'error' ? 'text-red-600' : 'text-green-600'">{{ feedback }}</p>
-        </form>
+          </form>
+        </div>
+
+        <!-- Booking calendar card -->
+        <div class="p-6 sm:p-8 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm">
+          <h2 class="text-2xl font-bold">Prendre rendez-vous</h2>
+          <p class="text-muted mt-2 text-sm">Réservez un créneau directement dans notre agenda.</p>
+          <div class="mt-4">
+            <ClientOnly>
+              <div class="w-full scroll-mt-28" id="booking-widget">
+                <iframe src="https://api.leadconnectorhq.com/widget/booking/N1tEhmxizgpmRrGOFxFN" style="width: 100%; border:none; overflow: hidden;" scrolling="no" id="N1tEhmxizgpmRrGOFxFN_1759650607201"></iframe>
+                <br />
+              </div>
+            </ClientOnly>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref, onMounted } from 'vue'
+import { reactive, ref, onMounted, onBeforeUnmount } from 'vue'
 
 // --- EmailJS config ---
 const EMAILJS_SERVICE_ID = 'service_7bylv9a'
@@ -199,6 +223,87 @@ async function handleSubmit() {
     feedbackType.value = 'error'
     console.error('EmailJS error', err)
   }
+}
+
+// --- Google Analytics tracking for booking widget ---
+function gaTrack(event: string, params: Record<string, any> = {}) {
+  // Fire only if gtag is available (i.e., user consented and GA loaded)
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', event, params)
+  } else if (typeof window !== 'undefined' && (window as any).dataLayer) {
+    // Fallback to dataLayer push
+    ;(window as any).dataLayer.push({ event, ...params })
+  }
+}
+
+let widgetViewed = false
+let io: IntersectionObserver | null = null
+function setupBookingWidgetTracking() {
+  if (typeof window === 'undefined') return
+  const el = document.getElementById('booking-widget')
+  if (!el || 'IntersectionObserver' in window === false) return
+
+  io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!widgetViewed && entry.isIntersecting) {
+        widgetViewed = true
+        gaTrack('view_booking_widget', { page: 'contact' })
+        if (io) io.disconnect()
+      }
+    })
+  }, { threshold: 0.3 })
+  io.observe(el)
+
+  // Click/interaction tracking as a best-effort signal
+  el.addEventListener('click', () => gaTrack('click_booking_widget', { page: 'contact' }), { once: true })
+
+  // Listen for potential postMessage from the widget (best-effort; schema may vary by provider)
+  const handler = (evt: MessageEvent) => {
+    try {
+      const origin = String(evt.origin || '')
+      if (!origin.includes('leadconnectorhq.com') && !origin.includes('msgsndr.com')) return
+      const data = evt.data
+      if (typeof data === 'object' && data) {
+        const type = (data.type || data.event || '') as string
+        if (type && /booking|appointment/i.test(type)) {
+          gaTrack('booking_submitted', { page: 'contact', source: 'leadconnector' })
+        }
+      }
+    } catch (_) { /* ignore */ }
+  }
+  window.addEventListener('message', handler)
+
+  // Cleanup
+  onBeforeUnmount(() => {
+    if (io) io.disconnect()
+    window.removeEventListener('message', handler)
+  })
+}
+
+onMounted(() => {
+  setupBookingWidgetTracking()
+  // Load LeadConnector embed script programmatically to avoid side-effect tag in template
+  try {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const existing = document.querySelector('script[src^="https://link.msgsndr.com/js/form_embed.js"]') as HTMLScriptElement | null
+      if (!existing) {
+        const s = document.createElement('script')
+        s.src = 'https://link.msgsndr.com/js/form_embed.js'
+        s.type = 'text/javascript'
+        s.async = true
+        document.body.appendChild(s)
+      }
+    }
+  } catch (_) { /* no-op */ }
+})
+
+function scrollToBooking() {
+  if (typeof window === 'undefined') return
+  const el = document.getElementById('booking-widget')
+  if (!el) return
+  const offset = 112 // ~28px * 4, adjust if header height changes
+  const y = el.getBoundingClientRect().top + window.scrollY - offset
+  window.scrollTo({ top: y, behavior: 'smooth' })
 }
 </script>
 

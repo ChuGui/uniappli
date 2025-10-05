@@ -34,14 +34,23 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const CONSENT_KEY = 'cookie:analytics-consent'
 const show = ref(false)
 
+function handleOpen() {
+  show.value = true
+}
+
 onMounted(() => {
   const existing = localStorage.getItem(CONSENT_KEY)
   show.value = !existing // show only if no choice yet
+  window.addEventListener('open-cookie-consent', handleOpen)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('open-cookie-consent', handleOpen)
 })
 
 function broadcast(value: 'granted' | 'denied') {

@@ -94,6 +94,9 @@
             <NuxtLink to="/mentions-legales" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
               Mentions légales
             </NuxtLink>
+            <button type="button" @click="openCookieConsent" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+              Gérer les cookies
+            </button>
           </div>
         </div>
       </div>
@@ -105,4 +108,10 @@
 import { computed } from 'vue'
 
 const currentYear = computed(() => new Date().getFullYear())
+
+function openCookieConsent() {
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('open-cookie-consent'))
+  }
+}
 </script>

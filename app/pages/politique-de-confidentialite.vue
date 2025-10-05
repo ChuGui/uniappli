@@ -39,10 +39,10 @@
 
       <h2>Transferts hors UE</h2>
       <p>
-        Les données peuvent être hébergées et traitées par nos prestataires techniques. Certains prestataires peuvent être situés hors de l’Union européenne.
-        Le cas échéant, ces transferts sont encadrés par des garanties appropriées (clauses contractuelles types de la Commission européenne, mesures
-        complémentaires). La liste précise des prestataires et pays de destination pourra être communiquée sur demande et sera précisée dans la présente
-        politique en cas d’évolution.
+        Les données peuvent être hébergées et traitées par nos prestataires techniques. Certains prestataires peuvent être situés hors de l’Union européenne,
+        notamment aux États‑Unis (par exemple, Google LLC pour Google Analytics si vous y consentez). Le cas échéant, ces transferts sont encadrés par des
+        garanties appropriées (clauses contractuelles types de la Commission européenne et, le cas échéant, mesures complémentaires). La liste précise des
+        prestataires et pays de destination pourra être communiquée sur demande et sera précisée dans la présente politique en cas d’évolution.
       </p>
 
       <h2>Durées de conservation</h2>
@@ -66,10 +66,17 @@
 
       <h2>Cookies</h2>
       <p>
-        Lors de votre navigation, des cookies peuvent être déposés sur votre terminal. Vous pouvez paramétrer vos choix via un bandeau de consentement (le cas échéant)
-        ou via votre navigateur. Seuls les cookies strictement nécessaires au fonctionnement du site sont déposés sans consentement. Tout cookie de mesure d’audience
-        ou de marketing ne sera déposé qu’avec votre accord préalable et pourra être retiré à tout moment.
+        Lors de votre navigation, des cookies peuvent être déposés sur votre terminal. Vous pouvez paramétrer vos choix via un bandeau de consentement ou via votre
+        navigateur. Seuls les cookies strictement nécessaires au fonctionnement du site sont déposés sans consentement. Tout cookie de mesure d’audience ou de
+        marketing ne sera déposé qu’avec votre accord préalable et pourra être retiré à tout moment.
       </p>
+      <ul>
+        <li>
+          <strong>Google Analytics (gtag.js)</strong> — Finalité: mesure d’audience et analyse de l’usage du site. Éditeur: Google LLC. Base légale: consentement.
+          Durée: jusqu’à 13 mois (selon la configuration de Google). Vous pouvez retirer votre consentement à tout moment depuis le bandeau (lorsqu’il est proposé)
+          ou via les paramètres de votre navigateur.
+        </li>
+      </ul>
 
       <h2>Sécurité</h2>
       <p>

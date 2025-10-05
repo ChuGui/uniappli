@@ -25,7 +25,7 @@
         <!-- Right: Text content -->
         <div class="order-1 md:order-2 mx-auto md:mx-0 max-w-2xl text-center md:text-left">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            <span class="text-primary-gradient font-lobster">
+            <span class="text-primary-gradient font-lobster drop-shadow-md">
               Libérez-vous des contraintes de la prospection pour vous consacrer sur le cœur de votre métier
             </span>
           </h1>
