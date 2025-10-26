@@ -4,9 +4,7 @@
     <section id="accueil"><HeroHome /></section>
     <section id="probleme"><ProblemSection /></section>
     <section id="solution"><SolutionSection /></section>
-    <section id="resultats"><ResultsSection /></section>
-    <section id="unicite"><UnicitySection /></section>
-    <section id="livrables"><DeliverablesSection /></section>
+
     <section id="tarifs"><PricingSection /></section>
     <section id="action"><ActionSection /></section>
 
@@ -74,9 +72,6 @@ const items: Item[] = [
   { id: 'accueil', label: 'Accueil' },
   { id: 'probleme', label: 'Problème' },
   { id: 'solution', label: 'Solution' },
-  { id: 'resultats', label: 'Garantie' },
-  { id: 'unicite', label: 'Unicité' },
-  { id: 'livrables', label: 'Livrables' },
   { id: 'tarifs', label: 'Tarifs' },
   { id: 'action', label: 'Action' },
 ]
@@ -88,9 +83,6 @@ const lotties: Record<string, string> = {
   accueil: '/lotties/business-team.json',
   probleme: '/lotties/under-maintenance.json',
   solution: '/lotties/solution.json',
-  resultats: '/lotties/Star.json',
-  unicite: '/lotties/Diamond.json',
-  livrables: '/lotties/gift.json',
   tarifs: '/lotties/dollar.json',
   action: '/lotties/rocket-solo.json',
 }
@@ -124,7 +116,7 @@ onBeforeUnmount(() => {
   observer?.disconnect()
 })
 
-// Items to show on mobile only (Accueil, Garantie, Tarifs)
-const mobileItems = items.filter(i => ['accueil', 'resultats', 'tarifs'].includes(i.id))
+// Items to show on mobile only (Accueil, Tarifs)
+const mobileItems = items.filter(i => ['accueil', 'tarifs'].includes(i.id))
 </script>
 

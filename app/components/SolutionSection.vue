@@ -1,5 +1,11 @@
 <template>
-  <section class="relative py-16 md:py-24 bg-gray-50/60">
+  <section class="relative py-16 md:py-8 bg-gray-50/60">
+    <!-- Decorative diffuse blobs (background) -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
+      <div class="bg-primary-gradient opacity-20 blur-3xl w-[36rem] h-[36rem] rounded-full absolute -left-32"></div>
+      <div class="bg-primary-gradient opacity-20 blur-3xl w-[28rem] h-[28rem] rounded-full absolute -bottom-44 -right-20"></div>
+      <div class="bg-secondary/30 blur-3xl w-[18rem] h-[18rem] rounded-full absolute top-1/3 -right-16"></div>
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Heading -->
       <div class="max-w-4xl">
@@ -13,82 +19,52 @@
             class="inline-block align-middle mr-2 w-16 h-16"
             aria-label="Animation solution"
           ></lottie-player>
-          <span class="text-primary-gradient">La solution : votre système automatique d’acquisition & de gestion de clients</span>
+          <span class="text-primary-gradient">La solution : un système d’acquisition qui travaille pour vous.</span>
         </h2>
-        <div class="mt-3 h-1 w-28 bg-primary-gradient rounded"></div>
-        <p class="mt-6 text-lg text-muted max-w-2xl">
-          Nous mettons en place pour vous une infrastructure complète, clé en main, pour attirer, qualifier et convertir vos prospects tout en gardant le contrôle.
-        </p>
       </div>
+      <!-- Content: text left, image right -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left: concise copy + bullets + CTA -->
+        <div class="order-2 md:order-1 max-w-xl">
+          <div class="space-y-5">
+            <h3 class="text-2xl sm:text-3xl font-semibold text-default">Ce que vous obtenez</h3>
+            <ul class="text-default space-y-4 leading-relaxed md:leading-loose">
+              <li>🔁 CRM et automatisations intelligentes.</li>
+              <li>🌐 Site et tunnel de vente optimisés.</li>
+              <li>📱 Suivi simple depuis l'application web et mobile <span class="text-primary-gradient font-lobster drop-shadow-md text-4xl">UniAppli</span></li>
+            </ul>
+            <p class="text-muted leading-relaxed">
+              On met en place une infrastructure simple et automatisée qui attire vos prospects, les convertit en clients et vous fait gagner du temps.
+              Vous restez concentré sur votre métier — <span class="font-bold">le système s’occupe du reste.</span>
+            </p>
+            <div class="pt-2">
+              <NuxtLink
+                to="/contact"
+                class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-transform duration-200 hover:scale-[1.03]"
+              >
+                🚀 Démarrer mon système
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
 
-      <!-- Feature grid -->
-      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- CRM -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">CRM</div>
-            <h3 class="text-lg font-semibold text-default">CRM sur‑mesure</h3>
+        <!-- Right: illustration -->
+        <div class="order-1 md:order-2">
+          <div class="relative">
+            <div aria-hidden="true" class="absolute -inset-6 bg-primary-gradient opacity-20 blur-3xl rounded-[2rem]"></div>
+            <div class="relative overflow-hidden bg-transparent group">
+              <div class="relative aspect-[4/3] w-full [clip-path:inset(0_round_48px_120px_48px_120px)] [transition:clip-path_400ms_ease] group-hover:[clip-path:inset(0_round_64px_96px_64px_96px)]">
+                <img
+                  src="/images/concept-de-controle-qualite-standard-m.jpg"
+                  alt="Illustration d’automatisation fluide"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 pointer-events-none bg-gradient-to-tl from-[var(--color-primary-start)]/15 via-transparent to-transparent"></div>
+              </div>
+            </div>
           </div>
-          <p class="mt-3 text-muted">Centralisez prospects, clients et conversations pour ne rien laisser passer.</p>
         </div>
-        <!-- Site / Landing -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">WEB</div>
-            <h3 class="text-lg font-semibold text-default">Site / Landing page</h3>
-          </div>
-          <p class="mt-3 text-muted">Pensée pour convertir directement vos visiteurs en rendez‑vous qualifiés.</p>
-        </div>
-        <!-- Tunnel de vente -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">FUN</div>
-            <h3 class="text-lg font-semibold text-default">Tunnel de vente</h3>
-          </div>
-          <p class="mt-3 text-muted">Un parcours clair qui accompagne vos prospects jusqu’à l’action.</p>
-        </div>
-        <!-- Lead magnet -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">LM</div>
-            <h3 class="text-lg font-semibold text-default">Lead magnet</h3>
-          </div>
-          <p class="mt-3 text-muted">Un contenu valeur pour attirer et capter des leads qualifiés.</p>
-        </div>
-        <!-- Automatisations -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">AUTO</div>
-            <h3 class="text-lg font-semibold text-default">Automatisations intelligentes</h3>
-          </div>
-          <p class="mt-3 text-muted">Emails, WhatsApp, SMS, DM Insta… qualification continue sans effort.</p>
-        </div>
-        <!-- App mobile -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">APP</div>
-            <h3 class="text-lg font-semibold text-default">Application mobile</h3>
-          </div>
-          <p class="mt-3 text-muted">Gérez tout depuis votre poche, où que vous soyez.</p>
-        </div>
-        <!-- E-réputation -->
-        <div class="p-6 rounded-2xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md sm:col-span-2 lg:col-span-1">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">REP</div>
-            <h3 class="text-lg font-semibold text-default">Réputation en ligne</h3>
-          </div>
-          <p class="mt-3 text-muted">Optimisez avis, profils et présence digitale pour inspirer confiance.</p>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-10 flex justify-center md:justify-start">
-        <NuxtLink
-          to="/contact"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]"
-          >
-          Démarrer votre système
-        </NuxtLink>
       </div>
     </div>
   </section>

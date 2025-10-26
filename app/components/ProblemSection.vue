@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-16 md:py-24 overflow-hidden">
+  <section class="relative py-16 md:py-8 overflow-hidden">
     <!-- Decorative diffuse blobs (background) -->
     <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
       <div class="bg-primary-gradient opacity-20 blur-3xl w-[36rem] h-[36rem] rounded-full absolute -left-32"></div>
@@ -19,54 +19,49 @@
             class="inline-block align-middle w-14 h-14 mr-2"
             aria-label="Animation under maintenance"
           ></lottie-player>
-          <span class="text-primary-gradient">Le problème</span>
+          <span class="text-primary-gradient">Vous êtes bon dans votre métier, <br></br> mais le web ne le sait pas encore.</span>
         </h2>
         <div class="mt-3 h-1 w-24 bg-primary-gradient rounded"></div>
-        <p class="mt-6 text-lg text-muted max-w-2xl">
-          Beaucoup de professionnels gaspillent de l'énergie dans la prospection au lieu de se concentrer sur leur savoir‑faire. Si cela vous parle, vous n'êtes pas seul.
-        </p>
       </div>
 
-      <!-- Content -->
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="space-y-4">
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous perdez des heures précieuses dans des tâches chronophages pour acquérir de nouveaux contacts.</p>
-          </div>
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous avez peur de passer à côté des dernières innovations et de perdre de l’argent.</p>
-          </div>
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous avez l’impression d’être en réaction plutôt qu’en action.</p>
-          </div>
-        </div>
-        <div class="space-y-4">
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous rêvez d’un “double” de vous qui gère automatiquement vos prospects et vos clients.</p>
-          </div>
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous n’avez pas un suivi clair de vos prospects ni de vos clients.</p>
-          </div>
-          <div class="flex items-start gap-3 p-4 rounded-xl border border-default bg-white/30 backdrop-blur-md shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] hover:shadow-md">
-            <span class="mt-1 text-secondary">👉</span>
-            <p class="text-default">Vous avez du mal à vous démarquer de la concurrence.</p>
+      <!-- Content: image left, text right -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Image placeholder (left on desktop) -->
+        <div class="order-1 md:order-1">
+          <div class="relative">
+            <div aria-hidden="true" class="absolute -inset-6 bg-primary-gradient opacity-20 blur-3xl rounded-[2rem]"></div>
+            <div class="relative overflow-hidden bg-transparent group">
+              <div class="relative aspect-[4/3] w-full [clip-path:inset(0_round_48px_120px_48px_120px)] [transition:clip-path_400ms_ease] group-hover:[clip-path:inset(0_round_64px_96px_64px_96px)]">
+                <img
+                  src="/images/femme-affaire.jpg"
+                  alt="Automatisation et système marketing"
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-[var(--color-primary-start)]/20 via-transparent to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- CTA subtle -->
-      <div class="mt-10 flex justify-center md:justify-start">
-        <NuxtLink
-          to="/rendez-vous"
-          class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]"
-          >
-          Résoudre ces problèmes
-        </NuxtLink>
+        <!-- Text content (right on desktop) -->
+        <div class="order-2 md:order-2 flex flex-col justify-center">
+          <h3 class="text-2xl sm:text-3xl font-semibold text-default mb-3">Comme beaucoup de pros, vous</h3>
+          <ul class="mt-1 text-default space-y-4 leading-relaxed md:leading-loose">
+            <li>⏳ Perdez des heures à prospecter manuellement.</li>
+            <li>💭 Ne savez pas toujours d’où viennent vos clients.</li>
+            <li>🚀 Avez du mal à vous démarquer malgré la qualité de votre travail.</li>
+          </ul>
+          <p class="mt-6 text-secondary/90 font-medium leading-relaxed">Ce n’est pas votre compétence qui manque — c’est le bon système derrière vous.</p>
+          <div class="mt-8">
+            <NuxtLink
+              to="/rendez-vous"
+              class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-transform duration-200 hover:scale-[1.03]"
+            >
+              💡 Découvrir la solution
+            </NuxtLink>
+          </div>
+        </div>
       </div>
     </div>
   </section>

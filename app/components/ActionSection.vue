@@ -1,5 +1,11 @@
 <template>
-  <section class="relative py-16 md:py-24 bg-gray-50/60">
+  <section class="relative py-16 md:py-8 bg-gray-50/60">
+    <!-- Decorative diffuse blobs (background) -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
+      <div class="bg-primary-gradient opacity-20 blur-3xl w-[36rem] h-[36rem] rounded-full absolute -left-32"></div>
+      <div class="bg-primary-gradient opacity-20 blur-3xl w-[28rem] h-[28rem] rounded-full absolute -bottom-44 -right-20"></div>
+      <div class="bg-secondary/30 blur-3xl w-[18rem] h-[18rem] rounded-full absolute top-1/3 -right-16"></div>
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <!-- Text column -->
