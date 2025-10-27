@@ -19,7 +19,7 @@
             class="inline-block align-middle mr-2 w-16 h-16"
             aria-label="Animation solution"
           ></lottie-player>
-          <span class="text-primary-gradient">La solution : un système d’acquisition qui travaille pour vous.</span>
+          <span class="text-primary-gradient">La solution : un système d’acquisition qui travaille pour vous</span>
         </h2>
       </div>
       <!-- Content: text left, image right -->

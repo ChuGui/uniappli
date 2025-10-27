@@ -19,7 +19,7 @@
             class="inline-block align-middle w-14 h-14 mr-2"
             aria-label="Animation under maintenance"
           ></lottie-player>
-          <span class="text-primary-gradient">Vous êtes bon dans votre métier, <br></br> mais le web ne le sait pas encore.</span>
+          <span class="text-primary-gradient">Vous êtes bon dans votre métier, <br></br> mais le web ne le sait pas encore</span>
         </h2>
         <div class="mt-3 h-1 w-24 bg-primary-gradient rounded"></div>
       </div>

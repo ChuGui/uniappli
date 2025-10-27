@@ -23,7 +23,7 @@
         </h2>
         <div class="mt-3 h-1 w-28 bg-primary-gradient rounded"></div>
         <p class="mt-6 text-lg text-muted max-w-2xl subtitle">
-          Choisissez l'option qui vous convient. C'est sans engagement.
+          Choisissez l'option qui vous convient. C'est sans engagement
         </p>
       </div>
 
