@@ -23,7 +23,7 @@
             <span class="text-primary-gradient">Passez à l’action dès aujourd’hui</span>
           </h2>
           <div class="mt-3 h-1 w-28 bg-primary-gradient rounded"></div>
-          <p class="mt-6 text-lg text-default">
+          <p class="mt-6 text-lg text-default subtitle">
             Ne laissez plus vos prospects filer. Offrez-vous un système qui travaille pour vous 24h/24 – 7j/7.
           </p>
           <!-- Mobile-only rocket between text and CTA -->

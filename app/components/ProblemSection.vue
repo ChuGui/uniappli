@@ -58,7 +58,7 @@
               to="/rendez-vous"
               class="inline-flex items-center justify-center rounded-full bg-secondary text-white px-6 py-3 font-medium shadow-xl hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition-transform duration-200 hover:scale-[1.03]"
             >
-              💡 Découvrir la solution
+              💡 Découvrir la solution <span class="text-white font-lobster ml-4">UniAppli</span>
             </NuxtLink>
           </div>
         </div>

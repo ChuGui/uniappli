@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&family=Lobster+Two:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 /* Google Fonts */
@@ -17,10 +17,9 @@
   --color-border: #E5E7EB; /* borders/lines */
 
   /* Fonts */
-  --font-title: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-    Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  --font-title: "Lobster Two", cursive;
+  --font-subtitle: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -35,8 +34,16 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: var(--font-title);
+}
+h3, h4, h5, h6 {
+  font-family: var(--font-subtitle);
+}
+
+/* Subtitle utility */
+.subtitle {
+  font-family: var(--font-subtitle);
 }
 
 /* Custom font utility for special headings */
@@ -68,8 +75,8 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-border);
 }
 
-.text-secondary { /* solid brand color */
-  color: var(--color-primary-start);
+.text-primary { /* solid brand color */
+  color: var(--color-primary-end);
 }
 
 .bg-secondary { /* solid brand color */
