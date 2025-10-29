@@ -40,7 +40,7 @@
               Nous contacter
             </NuxtLink>
             <NuxtLink
-              to="/about"
+              to="/services"
               class="inline-flex items-center justify-center rounded-full  px-6 py-3 font-medium text-default hover:bg-gray-50 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-start)] transition transition-transform duration-200 hover:scale-[1.03]"
             >
               En savoir plus

@@ -103,6 +103,3 @@ useHead({
 })
 </script>
 
-<script setup lang="ts">
-// Page statique Politique de confidentialité
-</script>

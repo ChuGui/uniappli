@@ -107,14 +107,6 @@
           Accueil
         </NuxtLink>
         <NuxtLink 
-          to="/about" 
-          @click="closeMobileMenu"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-          active-class="text-blue-600 bg-blue-50"
-        >
-          À propos
-        </NuxtLink>
-        <NuxtLink 
           to="/services" 
           @click="closeMobileMenu"
           class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"

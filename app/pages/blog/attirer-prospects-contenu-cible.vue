@@ -134,7 +134,9 @@ useHead({
   title: '🌟 Attirer des prospects avec du contenu ciblé',
   meta: [
     { name: 'description', content: 'Choisir un canal, parler des vrais problèmes, varier les formats et guider vers la prochaine étape : votre contenu devient un aimant pour vos clients.' },
-    { name: 'author', content: 'Guillaume Churlet' }
+    { name: 'author', content: 'Guillaume Churlet' },
+    { property: 'og:image', content: 'https://uniappli.fr/og/blog-contenu-cible.png' },
+    { name: 'twitter:image', content: 'https://uniappli.fr/og/blog-contenu-cible.png' }
   ],
   link: [ { rel: 'canonical', href: url.href } ],
   script: [
@@ -149,7 +151,8 @@ useHead({
         datePublished: '2025-07-15',
         dateModified: '2025-07-15',
         mainEntityOfPage: url.href,
-        description: 'Choisir un canal, parler des vrais problèmes, varier les formats et guider vers la prochaine étape.'
+        description: 'Choisir un canal, parler des vrais problèmes, varier les formats et guider vers la prochaine étape.',
+        image: 'https://uniappli.fr/og/blog-contenu-cible.png'
       })
     }
   ]

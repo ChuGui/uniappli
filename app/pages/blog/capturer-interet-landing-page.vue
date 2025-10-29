@@ -115,7 +115,9 @@ useHead({
   title: '🪄 Capturer l’intérêt grâce à une landing page',
   meta: [
     { name: 'description', content: 'Pourquoi et comment créer une landing page simple et efficace qui transforme vos visiteurs en contacts engagés.' },
-    { name: 'author', content: 'Guillaume Churlet' }
+    { name: 'author', content: 'Guillaume Churlet' },
+    { property: 'og:image', content: 'https://uniappli.fr/og/blog-landing-page.png' },
+    { name: 'twitter:image', content: 'https://uniappli.fr/og/blog-landing-page.png' }
   ],
   link: [ { rel: 'canonical', href: url.href } ],
   script: [
@@ -131,6 +133,8 @@ useHead({
         dateModified: '2025-08-22',
         mainEntityOfPage: url.href,
         description: 'Créer une page d’inscription qui transforme vos visiteurs en contacts engagés.'
+        ,
+        image: 'https://uniappli.fr/og/blog-landing-page.png'
       })
     }
   ]

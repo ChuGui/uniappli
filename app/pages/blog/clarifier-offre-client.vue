@@ -101,7 +101,9 @@ useHead({
   title: '🎯 Clarifier votre offre et votre client cible',
   meta: [
     { name: 'description', content: 'La clarté rend votre message magnétique. Voici comment définir votre client idéal, formuler votre promesse et structurer votre offre.' },
-    { name: 'author', content: 'Guillaume Churlet' }
+    { name: 'author', content: 'Guillaume Churlet' },
+    { property: 'og:image', content: 'https://uniappli.fr/og/blog-clarifier-offre.png' },
+    { name: 'twitter:image', content: 'https://uniappli.fr/og/blog-clarifier-offre.png' }
   ],
   link: [ { rel: 'canonical', href: url.href } ],
   script: [
@@ -116,7 +118,8 @@ useHead({
         datePublished: '2025-05-12',
         dateModified: '2025-05-12',
         mainEntityOfPage: url.href,
-        description: 'La clarté rend votre message magnétique. Voici comment définir votre client idéal, formuler votre promesse et structurer votre offre.'
+        description: 'La clarté rend votre message magnétique. Voici comment définir votre client idéal, formuler votre promesse et structurer votre offre.',
+        image: 'https://uniappli.fr/og/blog-clarifier-offre.png'
       })
     }
   ]
