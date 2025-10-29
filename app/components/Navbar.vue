@@ -33,6 +33,13 @@
             >
               Contact
             </NuxtLink>
+            <NuxtLink 
+              to="/inscription" 
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              active-class="text-blue-600 bg-blue-50"
+            >
+              Inscription
+            </NuxtLink>
             <NuxtLink
               to="/rendez-vous"
               @click="trackNavbarCTA"
@@ -115,6 +122,14 @@
           active-class="text-blue-600 bg-blue-50"
         >
           Contact
+        </NuxtLink>
+        <NuxtLink 
+          to="/inscription" 
+          @click="closeMobileMenu"
+          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+          active-class="text-blue-600 bg-blue-50"
+        >
+          Inscription
         </NuxtLink>
         <NuxtLink 
           to="/rendez-vous" 

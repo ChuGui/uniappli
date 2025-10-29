@@ -82,3 +82,65 @@ h3, h4, h5, h6 {
 .bg-secondary { /* solid brand color */
   background-color: var(--color-primary-start);
 }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem; /* px-5 py-3 */
+  border-radius: 9999px; /* pill rounded */
+  font-weight: 500; /* font-medium */
+  font-size: 0.875rem; /* text-sm */
+  color: #fff;
+  text-decoration: none;
+  transition: all 150ms ease;
+  box-shadow: 0 10px 24px -6px rgba(17, 24, 39, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(186, 103, 207, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0.5px);
+}
+
+/* Gradient button using brand gradient */
+.btn-gradient {
+  background-image: linear-gradient(56deg, var(--color-primary-start) 20%, var(--color-primary-mid) 50%, var(--color-primary-end) 80%);
+}
+.btn-gradient:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 14px 32px -6px rgba(17, 24, 39, 0.22);
+}
+
+/* Solid primary: BA67CF */
+.btn-primary {
+  background-color: var(--color-primary-start);
+}
+.btn-primary:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 14px 32px -6px rgba(17, 24, 39, 0.22);
+}
+
+/* Solid secondary: F99B4D */
+.btn-secondary {
+  background-color: var(--color-primary-end);
+}
+.btn-secondary:hover {
+  filter: brightness(0.98);
+}
+
+/* Light variant (for buttons on light bg like "En savoir plus") */
+.btn-light {
+  background-color: #ffffff;
+  color: var(--color-text);
+  box-shadow: 0 12px 30px -8px rgba(17, 24, 39, 0.2);
+}
+.btn-light:hover {
+  filter: none;
+  box-shadow: 0 16px 36px -8px rgba(17, 24, 39, 0.26);
+}
