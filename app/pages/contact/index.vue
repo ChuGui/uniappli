@@ -24,9 +24,15 @@
   </ClientOnly>
 </template>
 <script setup lang="ts">
-import { useHead } from '#imports'
+import { useHead, useRequestURL } from '#imports'
 
+const url = useRequestURL()
 useHead({
+  title: 'Contact · UniAppli',
+  meta: [
+    { name: 'description', content: 'Contactez UniAppli pour vos projets de système d’acquisition automatique et prenez rendez-vous avec notre équipe.' }
+  ],
+  link: [ { rel: 'canonical', href: url.href } ],
   script: [
     { src: 'https://link.msgsndr.com/js/form_embed.js', defer: true, body: true }
   ]

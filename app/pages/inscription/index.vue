@@ -24,9 +24,15 @@
   </ClientOnly>
 </template>
 <script setup lang="ts">
-import { useHead } from '#imports'
+import { useHead, useRequestURL } from '#imports'
 
+const url = useRequestURL()
 useHead({
+  title: 'Inscription · UniAppli',
+  meta: [
+    { name: 'description', content: 'Inscrivez votre activité et recevez votre système UniAppli clé en main pour attirer et convertir vos clients.' }
+  ],
+  link: [ { rel: 'canonical', href: url.href } ],
   script: [
     { src: 'https://link.msgsndr.com/js/form_embed.js', defer: true, body: true }
   ]

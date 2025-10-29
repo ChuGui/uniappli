@@ -90,6 +90,18 @@
     </div>
   </section>
 </template>
+<script setup lang="ts">
+import { useHead, useRequestURL } from '#imports'
+
+const url = useRequestURL()
+useHead({
+  title: 'Politique de confidentialité · UniAppli',
+  meta: [
+    { name: 'description', content: 'Politique de confidentialité d’UniAppli (RGPD) : traitements, bases légales, durées, droits et cookies.' }
+  ],
+  link: [ { rel: 'canonical', href: url.href } ]
+})
+</script>
 
 <script setup lang="ts">
 // Page statique Politique de confidentialité

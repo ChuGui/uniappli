@@ -66,6 +66,7 @@
 
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { useHead, useRequestURL } from '#imports'
 
 type Item = { id: string; label: string }
 const items: Item[] = [
@@ -118,5 +119,35 @@ onBeforeUnmount(() => {
 
 // Items to show on mobile only (Accueil, Tarifs)
 const mobileItems = items.filter(i => ['accueil', 'tarifs'].includes(i.id))
+
+const url = useRequestURL()
+useHead({
+  title: 'UniAppli · Système d’acquisition automatique pour coachs et thérapeutes',
+  meta: [
+    { name: 'description', content: 'Mettez en place un système clé en main pour attirer, qualifier et convertir automatiquement vos clients avec UniAppli.' }
+  ],
+  link: [ { rel: 'canonical', href: url.href } ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'UniAppli',
+        url: 'https://uniappli.fr',
+        logo: 'https://uniappli.fr/UniAppli.png'
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'UniAppli',
+        url: 'https://uniappli.fr'
+      })
+    }
+  ]
+})
 </script>
 

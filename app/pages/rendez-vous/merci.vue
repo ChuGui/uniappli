@@ -35,6 +35,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { useHead } from '#imports'
 
 const confettiHost = ref<HTMLElement | null>(null)
 
@@ -65,6 +66,14 @@ function burstConfetti() {
 
 onMounted(() => {
   burstConfetti()
+})
+
+useHead({
+  title: "Rendez-vous confirmé",
+  meta: [
+    { name: 'robots', content: 'noindex,follow' },
+    { name: 'description', content: "Rendez-vous confirmé · Nous revenons vers vous très rapidement." }
+  ]
 })
 </script>
 

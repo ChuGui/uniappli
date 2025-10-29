@@ -58,5 +58,14 @@
 </template>
 
 <script setup lang="ts">
-// Page statique Mentions légales
+import { useHead, useRequestURL } from '#imports'
+
+const url = useRequestURL()
+useHead({
+  title: 'Mentions légales · UniAppli',
+  meta: [
+    { name: 'description', content: "Informations légales d'UniAppli: éditeur, hébergeur, propriété intellectuelle, responsabilité et juridiction." }
+  ],
+  link: [ { rel: 'canonical', href: url.href } ]
+})
 </script>
