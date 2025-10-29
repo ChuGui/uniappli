@@ -76,6 +76,10 @@ h3, h4, h5, h6 {
 }
 
 .text-primary { /* solid brand color */
+  color: var(--color-primary-start);
+}
+
+.text-secondary { /* solid brand color */
   color: var(--color-primary-end);
 }
 

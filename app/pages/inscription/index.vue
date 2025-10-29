@@ -1,7 +1,8 @@
 <template>
   
-        <h1 class="text-2xl font-semibold text-gray-900 text-center">Informations du compte</h1>
-        <p class="mt-2 text-gray-600 text-center">Merci de renseigner les informations pour la création de votre compte <span class="font-bold text-primary-gradient drop-shadow-md text-4xl font-lobster">UniAppli</span>.</p>
+        <h1 class="text-2xl font-semibold text-gray-900 text-center">Renseignez les informations de votre activité</h1>
+        <p class="mt-2 text-gray-600 text-center">
+           et recevez votre système <span class="font-bold text-primary-gradient drop-shadow-md text-4xl font-lobster">UniAppli</span> clé en main !</p>
   <ClientOnly>
     <iframe
       src="https://api.leadconnectorhq.com/widget/form/RzE7Q7PcyFsdIaa6CvhN"
