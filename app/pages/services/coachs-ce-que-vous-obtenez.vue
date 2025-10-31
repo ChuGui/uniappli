@@ -2,7 +2,7 @@
   <section class="px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
     <div class="mx-auto w-full max-w-3xl">
       <h1 class="text-3xl sm:text-4xl font-bold leading-tight text-default text-center">
-        <span class="text-primary-gradient font-lobster drop-shadow-md text-4xl sm:text-5xl">🌟 Le Système UniAppli pour Coach·es</span>
+        <span class="text-primary-gradient font-lobster drop-shadow-md text-4xl sm:text-5xl">🌟 Le Système UniAppli</span>
       </h1>
       <p class="mt-5 text-base sm:text-lg text-default text-center">
         Bienvenue dans <strong>votre futur espace d’automatisation complète</strong>.<br />
