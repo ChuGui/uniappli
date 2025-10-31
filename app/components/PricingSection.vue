@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-16 md:py-8">
+  <section class="relative py-16 md:py-8 overflow-hidden">
     <!-- Decorative diffuse blobs (background) -->
     <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
       <div class="bg-primary-gradient opacity-20 blur-3xl w-[36rem] h-[36rem] rounded-full absolute -left-32"></div>

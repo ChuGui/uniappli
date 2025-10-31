@@ -19,13 +19,34 @@
             >
               Accueil
             </NuxtLink>
-            <NuxtLink 
-              to="/services" 
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-              active-class="text-blue-600 bg-blue-50"
-            >
-              Services
-            </NuxtLink>
+            <div class="relative group">
+              <NuxtLink 
+                to="/services" 
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 inline-flex items-center"
+                active-class="text-blue-600 bg-blue-50"
+              >
+                <span>Services</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-1 text-gray-500">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd" />
+                </svg>
+              </NuxtLink>
+              <div class="absolute left-0 top-full w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:pointer-events-auto transition ease-out duration-150 z-50">
+                <NuxtLink 
+                  to="/services"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                  active-class="text-blue-600 bg-blue-50"
+                >
+                  Présentation des services
+                </NuxtLink>
+                <NuxtLink 
+                  to="/services/coachs-ce-que-vous-obtenez"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                  active-class="text-blue-600 bg-blue-50"
+                >
+                  Coach·es — Ce que vous obtenez
+                </NuxtLink>
+              </div>
+            </div>
             <NuxtLink 
               to="/blog" 
               class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
@@ -113,6 +134,14 @@
           active-class="text-blue-600 bg-blue-50"
         >
           Services
+        </NuxtLink>
+        <NuxtLink 
+          to="/services/coachs-ce-que-vous-obtenez" 
+          @click="closeMobileMenu"
+          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 pl-6"
+          active-class="text-blue-600 bg-blue-50"
+        >
+          Coach·es — Ce que vous obtenez
         </NuxtLink>
         <NuxtLink 
           to="/blog" 
