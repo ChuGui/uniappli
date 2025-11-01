@@ -135,8 +135,61 @@ const url = useRequestURL()
 useHead({
   title: 'Coach·es — Ce que vous obtenez · Services',
   meta: [
-    { name: 'description', content: 'Découvrez tout ce que le système UniAppli vous apporte en tant que coach·e : site, tunnel, automatisations, calendriers, paiements, avis, pub, Voice AI, et plus.' }
+    { name: 'description', content: 'Découvrez tout ce que le système UniAppli vous apporte en tant que coach·e : site, tunnel, automatisations, calendriers, paiements, avis, pub, Voice AI, et plus.' },
+    { property: 'og:title', content: 'Ce que vous obtenez · UniAppli' },
+    { property: 'og:description', content: 'Le système clé en main pour attirer, convertir et fidéliser vos client·es.' },
+    { property: 'og:url', content: url.href },
+    { property: 'og:image', content: '/og/services-get.png' },
+    { name: 'twitter:title', content: 'Ce que vous obtenez · UniAppli' },
+    { name: 'twitter:description', content: 'Le système clé en main pour attirer, convertir et fidéliser vos client·es.' },
+    { name: 'twitter:image', content: '/og/services-get.png' }
   ],
   link: [ { rel: 'canonical', href: url.href } ]
+})
+
+// FAQ schema (JSON-LD) à partir des questions présentes sur la page
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Pourquoi créer un système d’acquisition automatique ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Parce qu’il vous permet d’avoir un flux continu de nouveaux clients, sans dépendre du bouche-à-oreille ou des réseaux sociaux.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Est-ce que c’est compliqué à mettre en place ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Non. En 2 à 4 semaines, vous pouvez avoir un système complet : page, emails et calendrier automatisé.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Quels outils utiliser ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Des outils simples comme GoHighLevel, Make ou Systeme.io suffisent pour gérer vos contacts, vos emails et vos rendez-vous.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Est-ce que ça marche vraiment pour les coachs et thérapeutes ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui — surtout pour vous. L’automatisation vous libère du stress de la prospection, et vous permet de vous concentrer sur ce que vous faites de mieux : accompagner vos clients.'
+      }
+    }
+  ]
+}
+
+useHead({
+  script: [
+    { type: 'application/ld+json', innerHTML: JSON.stringify(faqJsonLd) }
+  ]
 })
 </script>

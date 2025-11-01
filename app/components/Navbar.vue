@@ -136,12 +136,12 @@
           Services
         </NuxtLink>
         <NuxtLink 
-          to="/services/coachs-ce-que-vous-obtenez" 
+          to="/services/ce-que-vous-obtenez" 
           @click="closeMobileMenu"
           class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 pl-6"
           active-class="text-blue-600 bg-blue-50"
         >
-          Coach·es — Ce que vous obtenez
+          Ce que vous obtenez
         </NuxtLink>
         <NuxtLink 
           to="/blog" 

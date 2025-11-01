@@ -53,6 +53,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://link.msgsndr.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://api.leadconnectorhq.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://unpkg.com', crossorigin: 'anonymous' }
