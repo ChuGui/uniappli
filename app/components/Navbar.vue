@@ -39,11 +39,11 @@
                   Présentation des services
                 </NuxtLink>
                 <NuxtLink 
-                  to="/services/coachs-ce-que-vous-obtenez"
+                  to="/services/ce-que-vous-obtenez"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
                   active-class="text-blue-600 bg-blue-50"
                 >
-                  Coach·es — Ce que vous obtenez
+                  Ce que vous obtenez
                 </NuxtLink>
               </div>
             </div>
