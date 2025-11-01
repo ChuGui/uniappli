@@ -30,7 +30,7 @@
             </span>
           </h1>
           <p class="mt-6 text-lg text-muted">
-            <span class="text-primary-gradient font-lobster drop-shadow-md text-4xl">UniAppli</span> est la plateforme de gestion de prospection et de marketing <span class="font-bold text-primary text-2xl">simple</span>, <span class="font-bold text-primary text-2xl">puissante</span> et <span class="font-bold text-primary text-2xl">automatisée</span>.
+            <span class="text-primary-gradient font-lobster drop-shadow-md text-4xl">UniAppli</span> est la plateforme de gestion de prospection et de marketing <span class="font-bold text-primary text-2xl">simple</span>, <span class="font-bold text-primary text-2xl">puissante</span> et <span class="font-bold text-primary text-2xl">automatisée</span>
           </p>
           <div class="mt-10 flex flex-wrap items-center gap-4 justify-center md:justify-start">
             <NuxtLink
