@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    '@nuxt/image',
     ['@nuxtjs/sitemap', {
       siteUrl: 'https://uniappli.fr',
       exclude: [
@@ -36,6 +37,19 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+  },
+  image: {
+    // Fournisseur par défaut
+    provider: 'ipx', // local transformer via Nitro
+
+    // Formats modernes recommandés
+    format: ['webp'],
+
+    // Compression & taille max
+    quality: 70,
+
+    // (Optionnel) domaines externes autorisés
+    domains: ['res.cloudinary.com', 'cdn.uniappli.fr'],
   },
   app: {
     head: {
@@ -63,6 +77,25 @@ export default defineNuxtConfig({
         {
           src: 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js',
           defer: true,
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'UniAppli',
+            url: 'https://uniappli.fr',
+            logo: 'https://uniappli.fr/UniAppli.png'
+          })
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'UniAppli',
+            url: 'https://uniappli.fr'
+          })
         },
       ],
     },

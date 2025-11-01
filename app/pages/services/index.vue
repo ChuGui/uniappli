@@ -176,8 +176,37 @@ const url = useRequestURL()
 useHead({
   title: 'Services · Système d’acquisition automatique',
   meta: [
-    { name: 'description', content: 'Découvrez comment mettre en place un système d’acquisition automatique pour attirer, qualifier et convertir des clients — simplement et sans complexité.' }
+    { name: 'description', content: 'Découvrez comment mettre en place un système d’acquisition automatique pour attirer, qualifier et convertir des clients — simplement et sans complexité.' },
+    { property: 'og:title', content: 'Services · UniAppli' },
+    { property: 'og:description', content: 'Votre système d’acquisition clé en main.' },
+    { property: 'og:url', content: url.href },
+    { property: 'og:image', content: '/og/services.png' },
+    { name: 'twitter:title', content: 'Services · UniAppli' },
+    { name: 'twitter:description', content: 'Votre système d’acquisition clé en main.' },
+    { name: 'twitter:image', content: '/og/services.png' }
   ],
   link: [ { rel: 'canonical', href: url.href } ]
+})
+
+// Service JSON-LD
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Système d’acquisition automatique pour coach·es',
+  provider: {
+    '@type': 'Organization',
+    name: 'UniAppli',
+    url: 'https://uniappli.fr'
+  },
+  areaServed: 'FR',
+  serviceType: 'Marketing automation, site, tunnel de vente, calendriers, paiements',
+  url: url.href,
+  description: 'Mise en place d’un système complet pour attirer, convertir et fidéliser vos clients.'
+}
+
+useHead({
+  script: [
+    { type: 'application/ld+json', innerHTML: JSON.stringify(serviceJsonLd) }
+  ]
 })
 </script>

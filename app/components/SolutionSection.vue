@@ -54,10 +54,12 @@
             <div aria-hidden="true" class="absolute -inset-6 bg-primary-gradient opacity-20 blur-3xl rounded-[2rem]"></div>
             <div class="relative overflow-hidden bg-transparent group">
               <div class="relative aspect-[4/3] w-full [clip-path:inset(0_round_48px_120px_48px_120px)] [transition:clip-path_400ms_ease] group-hover:[clip-path:inset(0_round_64px_96px_64px_96px)]">
-                <img
+                <NuxtImg
                   src="/images/concept-de-controle-qualite-standard-m.jpg"
                   alt="Illustration d’automatisation fluide"
                   loading="lazy"
+                  sizes="100vw sm:50vw md:400px"
+                  quality="75"
                   class="w-full h-full object-cover"
                 />
                 <div class="absolute inset-0 pointer-events-none bg-gradient-to-tl from-[var(--color-primary-start)]/15 via-transparent to-transparent"></div>

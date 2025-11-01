@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <NuxtLink to="/" class="flex items-center">
-            <img src="/UniAppli.png" alt="UniAppli" class="h-8 w-auto" />
+            <NuxtImg src="/UniAppli.png" alt="UniAppli" width="261" height="78" class="h-8 w-auto" />
           </NuxtLink>
         </div>
 
