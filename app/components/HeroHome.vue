@@ -26,7 +26,7 @@
         <div class="order-1 md:order-2 mx-auto md:mx-0 max-w-2xl text-center md:text-left">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             <span class="text-primary-gradient font-lobster drop-shadow-md">
-              Offrez à votre accompagnement la visibilité qu'il mérite !.
+              Offrez à votre accompagnement la visibilité qu'il mérite !
             </span>
           </h1>
           <p class="mt-6 text-lg text-muted">
