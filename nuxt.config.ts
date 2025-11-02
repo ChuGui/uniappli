@@ -67,7 +67,8 @@ export default defineNuxtConfig({
       logo2x: 522,
       s280: 280,
       s800: 800,
-      s1120: 1120
+      s1120: 1120,
+      s2240: 2240
     },
 
     // Qualité par défaut
