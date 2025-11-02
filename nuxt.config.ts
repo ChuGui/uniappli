@@ -61,7 +61,13 @@ export default defineNuxtConfig({
       mdFixed: 400,   // pour sizes: "md:400px"
       lg: 768,
       xl: 1024,
-      '2xl': 1280
+      '2xl': 1280,
+      // Custom widths used by components (to avoid warnings)
+      logo: 261,
+      logo2x: 522,
+      s280: 280,
+      s800: 800,
+      s1120: 1120
     },
 
     // Qualité par défaut

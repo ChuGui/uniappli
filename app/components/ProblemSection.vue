@@ -36,7 +36,7 @@
                   src="/images/femme-affaire.jpg"
                   alt="Automatisation et système marketing"
                   loading="lazy"
-                  sizes="100vw sm:50vw md:400px"
+                  sizes="100vw sm:560px mdFixed:400px lg:768px xl:1024px 2xl:1120px"
                   quality="75"
                   class="w-full h-full object-cover"
                 />
