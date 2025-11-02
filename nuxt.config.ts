@@ -41,6 +41,14 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'vercel', // pas 'vercel-edge'
   },
+  routeRules: {
+    // Improve caching for transformed images on Vercel
+    '/_ipx/**': {
+      headers: {
+        'cache-control': 'public, max-age=31536000, immutable'
+      }
+    }
+  },
   image: {
     provider: 'ipx',
     format: ['webp'],
@@ -50,7 +58,13 @@ export default defineNuxtConfig({
     ipx: {
       // Autorise les chemins sous /public
       // (regex; le ^/ est important)
-      allow: ['^/images/.*', '^/og/.*', '^/uploads/.*'],
+      allow: [
+        // Allow common image extensions at any path (including root-level like /UniAppli.png)
+        '^/.*\\.(png|jpe?g|webp|gif|svg)$',
+        '^/images/.*',
+        '^/og/.*',
+        '^/uploads/.*'
+      ],
       // maxAge: 60 * 60 * 24 * 30, // optionnel
     },
   },
