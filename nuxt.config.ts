@@ -38,6 +38,9 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  nitro: {
+    preset: 'vercel', // pas 'vercel-edge'
+  },
   image: {
     // Fournisseur par défaut
     provider: 'ipx', // local transformer via Nitro
