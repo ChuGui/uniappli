@@ -42,25 +42,16 @@ export default defineNuxtConfig({
     preset: 'vercel', // pas 'vercel-edge'
   },
   image: {
-    // Fournisseur par défaut
-    provider: 'ipx', // local transformer via Nitro
-
-    // Formats modernes recommandés
+    provider: 'ipx',
     format: ['webp'],
-
-    // Compression & taille max
     quality: 70,
-
-    // (Optionnel) domaines externes autorisés
+    // si tu utilises aussi des images distantes, garde "domains"
     domains: ['res.cloudinary.com', 'cdn.uniappli.fr'],
-    // ⚠️ IPX options
     ipx: {
-      // répertoire racine des fichiers locaux
-      dir: 'public',
-      // liste blanche des dossiers accessibles
-      allow: ['images', 'og', 'uploads'], // ajoute les tiens au besoin
-      // (optionnel) cache plus long en prod
-      // maxAge: 60 * 60 * 24 * 30,
+      // Autorise les chemins sous /public
+      // (regex; le ^/ est important)
+      allow: ['^/images/.*', '^/og/.*', '^/uploads/.*'],
+      // maxAge: 60 * 60 * 24 * 30, // optionnel
     },
   },
   app: {
