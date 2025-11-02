@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     // Force Nuxt Image à générer des URLs absolues (corrige ./_ipx sur custom domain)
     cdnURL: 'https://www.uniappli.fr'
   }
+
   ,
   app: {
     head: {
