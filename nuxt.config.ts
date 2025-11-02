@@ -50,19 +50,31 @@ export default defineNuxtConfig({
     }
   },
   image: {
-    provider: 'ipx',
-    format: ['webp'],
-    quality: 70,
-    domains: ['res.cloudinary.com', 'cdn.uniappli.fr'],
-    ipx: {
-      // Autorise les chemins des images locales
-      allow: ['^/images/.*', '^/og/.*', '^/uploads/.*'],
-    },
-    // Force Nuxt Image à générer des URLs absolues (corrige ./_ipx sur custom domain)
-    cdnURL: 'https://www.uniappli.fr'
-  }
+    provider: 'vercel',
 
-  ,
+    // Déclare TOUTES les largeurs que tu utilises (ex: 320, 560, 640, 400 etc.)
+    // → Vercel ne redimensionne que les tailles listées
+    screens: {
+      xs: 320,
+      sm: 560,
+      md: 640,
+      mdFixed: 400,   // pour sizes: "md:400px"
+      lg: 768,
+      xl: 1024,
+      '2xl': 1280
+    },
+
+    // Qualité par défaut
+    quality: 70,
+
+    // Formats autorisés par Vercel (mime types)
+    vercel: {
+      formats: ['image/webp']   // tu voulais webp only
+    },
+
+    // Pour les images distantes (si tu en as)
+    domains: ['res.cloudinary.com', 'cdn.uniappli.fr']
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
