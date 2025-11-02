@@ -55,9 +55,12 @@ export default defineNuxtConfig({
     domains: ['res.cloudinary.com', 'cdn.uniappli.fr'],
     // ⚠️ IPX options
     ipx: {
-      // Autorise l'accès aux fichiers sous /public/images/**
-      allow: ['^/images/'],   // regex (tu peux en ajouter d'autres)
-      // maxAge: 60 * 60 * 24 * 30, // optionnel
+      // répertoire racine des fichiers locaux
+      dir: 'public',
+      // liste blanche des dossiers accessibles
+      allow: ['images', 'og', 'uploads'], // ajoute les tiens au besoin
+      // (optionnel) cache plus long en prod
+      // maxAge: 60 * 60 * 24 * 30,
     },
   },
   app: {
