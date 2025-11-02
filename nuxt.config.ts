@@ -53,21 +53,15 @@ export default defineNuxtConfig({
     provider: 'ipx',
     format: ['webp'],
     quality: 70,
-    // si tu utilises aussi des images distantes, garde "domains"
     domains: ['res.cloudinary.com', 'cdn.uniappli.fr'],
     ipx: {
-      // Autorise les chemins sous /public
-      // (regex; le ^/ est important)
-      allow: [
-        // Allow common image extensions at any path (including root-level like /UniAppli.png)
-        '^/.*\\.(png|jpe?g|webp|gif|svg)$',
-        '^/images/.*',
-        '^/og/.*',
-        '^/uploads/.*'
-      ],
-      // maxAge: 60 * 60 * 24 * 30, // optionnel
+      // Autorise les chemins des images locales
+      allow: ['^/images/.*', '^/og/.*', '^/uploads/.*'],
     },
-  },
+    // Force Nuxt Image à générer des URLs absolues (corrige ./_ipx sur custom domain)
+    cdnURL: 'https://www.uniappli.fr'
+  }
+  ,
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
